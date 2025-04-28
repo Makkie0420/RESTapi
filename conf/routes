@@ -24,3 +24,10 @@ GET     /public/*filepath                       Static.Serve("public")
 # For rapid development uncomment the following to add new controller.action endpoints
 # without having to add them to the routes table.
 # *       /:controller/:action                    :controller.:action
+
+# Oracle Users API routes
+GET     /oracle/users             OracleUsers.ListUsers
+GET     /oracle/users/:id          OracleUsers.GetUser
+POST    /oracle/users              OracleUsers.CreateUser
+PUT     /oracle/users/:id          OracleUsers.UpdateUser
+DELETE  /oracle/users/:id          OracleUsers.DeleteUser
